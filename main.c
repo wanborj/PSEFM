@@ -62,7 +62,18 @@ int main(void)
     xTaskCreate( vSensor, "Sensor", SERVANT_STACK_SIZE, (void *)&pvParameters[0],tskIDLE_PRIORITY + 1, &xTaskOfHandle[0]);
     xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[1],tskIDLE_PRIORITY + 1, &xTaskOfHandle[1]);
     xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[2],tskIDLE_PRIORITY + 1, &xTaskOfHandle[2]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[3],tskIDLE_PRIORITY + 1, &xTaskOfHandle[3]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[4],tskIDLE_PRIORITY + 1, &xTaskOfHandle[4]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[5],tskIDLE_PRIORITY + 1, &xTaskOfHandle[5]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[6],tskIDLE_PRIORITY + 1, &xTaskOfHandle[6]);
 
+    xTaskCreate( vSensor,  "Sensor", SERVANT_STACK_SIZE,  (void *)&pvParameters[7],tskIDLE_PRIORITY + 2,  &xTaskOfHandle[7]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[8],tskIDLE_PRIORITY + 2,  &xTaskOfHandle[8]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[9],tskIDLE_PRIORITY + 2,  &xTaskOfHandle[9]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[10],tskIDLE_PRIORITY + 2, &xTaskOfHandle[10]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[11],tskIDLE_PRIORITY + 2, &xTaskOfHandle[11]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[12],tskIDLE_PRIORITY + 2, &xTaskOfHandle[12]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[13],tskIDLE_PRIORITY + 2, &xTaskOfHandle[13]);
     /* Start running the task. */
     vTaskStartScheduler();
 
@@ -102,6 +113,7 @@ void vApplicationTickHook( void )
     if( IS_INIT == 1 && xCurrentTime == 100 )
     {
         xSemaphoreGive( xBinarySemaphore[0] );
+        xSemaphoreGive( xBinarySemaphore[7] );
         IS_INIT = 0;
     }
     

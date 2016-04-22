@@ -94,12 +94,24 @@ xTaskHandle xTaskOfHandle[NUMBEROFSERVANT];         // record the handle of all 
 //portBASE_TYPE xTaskComplete[NUMBEROFTASK];  // record whether specified task completes execution
 portTickType xPeriodOfTask[NUMBEROFTASK] =
 {
-    100
+    200,
+    200
 };
 
 // the LET of all S-Servant (ms)
 portTickType xLetOfServant[NUMBEROFSERVANT] = 
 { 
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4, //  task 2
+    4,
+    4,
+    4,
     4,
     4,
     4
@@ -109,18 +121,49 @@ portBASE_TYPE xTaskOfServant[NUMBEROFSERVANT] =
 {
     0,
     0,
-    0
+    0,
+    0,
+    0,
+    0,
+    0,
+    1, // task 2
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
 };
 
 
 struct xRelationship xRelations = 
 {
-    4,
+    24,
     {
         {0,1,1},
         {0,2,1},
+        {0,3,1},
+        {0,4,1},
+        {0,5,1},
+        {0,6,1},
         {1,0,1},
         {2,0,1},
+        {3,0,1},
+        {4,0,1},
+        {5,0,1},
+        {6,0,1},
+        {7,8,1}, // task 2
+        {7,9,1},
+        {7,10,1},
+        {7,11,1},
+        {7,12,1},
+        {7,13,1},
+        {8, 7,1},
+        {9, 7,1},
+        {10,7,1},
+        {11,7,1},
+        {12,7,1},
+        {13,7,1}
     }
 };
 

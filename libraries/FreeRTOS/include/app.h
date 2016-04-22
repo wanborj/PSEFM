@@ -71,9 +71,9 @@
 #include "eventlist.h"
 
 
-#define NUMBEROFSERVANT 4 
-#define NUMBEROFTASK 1
-#define MAXRELATION NUMBEROFSERVANT 
+#define NUMBEROFSERVANT 15 
+#define NUMBEROFTASK 2
+#define MAXRELATION 200 
 
 #define MAXOUTDEGREE 10   // network max in degree of every S-servant
 #define MAXINDEGREE 10  // network max out degree of every s-servant

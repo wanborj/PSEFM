@@ -196,6 +196,7 @@ void vEventReceiveAll( void * pvParameter, xEventHandle *pxEvent )
     xCurrentTime = xTaskGetTickCount(); 
     vTaskSetxStartTime( xTaskOfHandle[xMyFlag], xCurrentTime );
 
+    vPrintNumber(300);
     for( i = 0; i < NUM; i ++ )
     {
         // get all the in flag
@@ -204,6 +205,7 @@ void vEventReceiveAll( void * pvParameter, xEventHandle *pxEvent )
         // them back to current Servant through the inout point
         vEventReceive( &pxEvent[i], xTaskOfHandle[xInFlag[i]], pxCurrentReadyList );
     }
+    vPrintNumber(300);
 }
 
 void vEventDeleteAll( void * pvParameter, xEventHandle * pxEvent )
@@ -337,7 +339,9 @@ void vSensor( void * pvParameter )
         }
 
         // create events for all destination servants of this servant. 
+        vPrintNumber(200);
         vEventCreateAll( pvMyParameter, xDatas );
+        vPrintNumber(200);
 
         // this is the first s-servant
         for( i = 0; i < xFunctionTimes; ++ i )
@@ -417,7 +421,9 @@ void vServant( void * pvParameter )
 
         vEventDeleteAll( pvMyParameter, pxEvent );        
 
+        vPrintNumber(200);
         vEventCreateAll( pvMyParameter, xDatas );
+        vPrintNumber(200);
 
         if( xCurrentTime > xDatas[0].xNextPeriod )
         {
@@ -466,7 +472,7 @@ void vR_Servant( void * pvParameter)
         // waiting for events created by tick hook or S-Servant
         xSemaphoreTake( xBinarySemaphore[xMyFlag], portMAX_DELAY );
 
-        vPrintNumber( xMyFlag );
+        vPrintNumber( 400 );
         xCurrentTime = xTaskGetTickCount();
         //vPrintNumber( xCurrentTime );
         vTaskSetxStartTime( xTaskOfHandle[xMyFlag], xCurrentTime );
@@ -546,7 +552,7 @@ void vR_Servant( void * pvParameter)
         else if ( xResult == 0 )
         {
             //vTaskDelayLET();
-            vPrintNumber( (xMyFlag + 10) * 3 );
+            vPrintNumber( 400 );
             //vPrintString("not time yet\n\r");
             continue;
         }
@@ -566,7 +572,7 @@ void vR_Servant( void * pvParameter)
 
             //vTaskDelayLET();
 
-            vPrintNumber( (xMyFlag + 10) * 3 );
+            vPrintNumber( 400 );
 
             // send semaphore to destinationtcb
             xSemaphoreGive( xBinarySemaphore[j] );
