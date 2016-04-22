@@ -59,53 +59,9 @@ int main(void)
 
     xTaskCreate( vR_Servant, "R-Servant", SERVANT_STACK_SIZE, (void *)&pvParameters[NUMBEROFSERVANT-1],tskIDLE_PRIORITY + 1, &xTaskOfHandle[NUMBEROFSERVANT-1]);
 
-    // task 1, 100ms,
-    xTaskCreate( vSensor, "Sensor 0", SERVANT_STACK_SIZE, (void *)&pvParameters[0], tskIDLE_PRIORITY + 15, &xTaskOfHandle[0]);
-    xTaskCreate( vServant, "Servant 1", SERVANT_STACK_SIZE, (void *)&pvParameters[1], tskIDLE_PRIORITY + 15, &xTaskOfHandle[1]);
-
-    // task 2 100ms,
-    xTaskCreate( vSensor, "Sensor 2", SERVANT_STACK_SIZE, (void *)&pvParameters[2], tskIDLE_PRIORITY + 14, &xTaskOfHandle[2]);
-    xTaskCreate( vServant, "Servant 3", SERVANT_STACK_SIZE, (void *)&pvParameters[3], tskIDLE_PRIORITY + 14,&xTaskOfHandle[3]);
-
-    // task 6 100ms,
-    xTaskCreate( vSensor, "Sensor 7", SERVANT_STACK_SIZE, (void *)&pvParameters[7], tskIDLE_PRIORITY + 13, &xTaskOfHandle[7]);
-    xTaskCreate( vServant, "Servant 8", SERVANT_STACK_SIZE, (void *)&pvParameters[8], tskIDLE_PRIORITY + 13,&xTaskOfHandle[8]);
-
-    // task 3, 200ms, 
-    xTaskCreate( vSensor, "Sensor 4", SERVANT_STACK_SIZE, (void *)&pvParameters[4], tskIDLE_PRIORITY + 12, &xTaskOfHandle[4]); 
-
-    // task 4, 200ms
-    xTaskCreate( vSensor, "Sensor 5", SERVANT_STACK_SIZE, (void *)&pvParameters[5], tskIDLE_PRIORITY + 11, &xTaskOfHandle[5]); 
-
-    // task 5, 200ms
-    xTaskCreate( vSensor, "Sensor 6", SERVANT_STACK_SIZE, (void *)&pvParameters[6], tskIDLE_PRIORITY + 10, &xTaskOfHandle[6]); 
-
-    // task 7, 200ms
-    xTaskCreate( vSensor, "Sensor 9", SERVANT_STACK_SIZE, (void *)&pvParameters[9], tskIDLE_PRIORITY + 9, &xTaskOfHandle[9]); 
-    xTaskCreate( vServant, "Servant 10", SERVANT_STACK_SIZE, (void *)&pvParameters[10], tskIDLE_PRIORITY + 9,&xTaskOfHandle[10]);
-    xTaskCreate( vServant, "Servant 11", SERVANT_STACK_SIZE, (void *)&pvParameters[11], tskIDLE_PRIORITY + 9,&xTaskOfHandle[11]);
-
-    // task 8 200ms
-    xTaskCreate( vSensor, "Sensor 12", SERVANT_STACK_SIZE, (void *)&pvParameters[12], tskIDLE_PRIORITY + 8, &xTaskOfHandle[12]); 
-
-    // task 13 400ms
-    xTaskCreate( vSensor, "Sensor 20", SERVANT_STACK_SIZE, (void *)&pvParameters[20], tskIDLE_PRIORITY + 7, &xTaskOfHandle[20]); 
-
-    // task 9 1000ms
-    xTaskCreate( vSensor, "Sensor 13", SERVANT_STACK_SIZE, (void *)&pvParameters[13], tskIDLE_PRIORITY + 6, &xTaskOfHandle[13]); 
-    xTaskCreate( vServant, "Servant 14", SERVANT_STACK_SIZE, (void *)&pvParameters[14], tskIDLE_PRIORITY + 6,&xTaskOfHandle[14]);
-
-    // task 10 1000ms
-    xTaskCreate( vSensor, "Sensor 15", SERVANT_STACK_SIZE, (void *)&pvParameters[15], tskIDLE_PRIORITY + 5, &xTaskOfHandle[15]); 
-    xTaskCreate( vServant, "Servant 16", SERVANT_STACK_SIZE, (void *)&pvParameters[16], tskIDLE_PRIORITY + 5,&xTaskOfHandle[16]);
-    xTaskCreate( vServant, "Servant 17", SERVANT_STACK_SIZE, (void *)&pvParameters[17], tskIDLE_PRIORITY + 5,&xTaskOfHandle[17]);
-
-    // task 11 1000ms
-    xTaskCreate( vSensor, "Sensor 18", SERVANT_STACK_SIZE, (void *)&pvParameters[18], tskIDLE_PRIORITY + 4, &xTaskOfHandle[18]); 
-
-    // task 12 1000ms
-    xTaskCreate( vSensor, "Sensor 19", SERVANT_STACK_SIZE, (void *)&pvParameters[19], tskIDLE_PRIORITY + 3, &xTaskOfHandle[19]); 
-
+    xTaskCreate( vSensor, "Sensor", SERVANT_STACK_SIZE, (void *)&pvParameters[0],tskIDLE_PRIORITY + 1, &xTaskOfHandle[0]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[1],tskIDLE_PRIORITY + 1, &xTaskOfHandle[1]);
+    xTaskCreate( vServant, "servant", SERVANT_STACK_SIZE, (void *)&pvParameters[2],tskIDLE_PRIORITY + 1, &xTaskOfHandle[2]);
 
     /* Start running the task. */
     vTaskStartScheduler();
@@ -146,18 +102,6 @@ void vApplicationTickHook( void )
     if( IS_INIT == 1 && xCurrentTime == 100 )
     {
         xSemaphoreGive( xBinarySemaphore[0] );
-        xSemaphoreGive( xBinarySemaphore[2] );
-        xSemaphoreGive( xBinarySemaphore[7] );
-        xSemaphoreGive( xBinarySemaphore[4] );
-        xSemaphoreGive( xBinarySemaphore[5] );
-        xSemaphoreGive( xBinarySemaphore[6] );
-        xSemaphoreGive( xBinarySemaphore[9] );
-        xSemaphoreGive( xBinarySemaphore[12] );
-        xSemaphoreGive( xBinarySemaphore[13] );
-        xSemaphoreGive( xBinarySemaphore[15] );
-        xSemaphoreGive( xBinarySemaphore[18] );
-        xSemaphoreGive( xBinarySemaphore[19] );
-        xSemaphoreGive( xBinarySemaphore[20] );
         IS_INIT = 0;
     }
     
@@ -165,12 +109,9 @@ void vApplicationTickHook( void )
     // when time meeting the start time of task period
     if( xCurrentTime >= xPeriodOfTask[0] * 2 )
     {
-        if( xCurrentTime % xPeriodOfTask[0] == 0 || 
-            xCurrentTime % xPeriodOfTask[2] == 0 ||
-            xCurrentTime % xPeriodOfTask[12] == 0 ||
-            xCurrentTime % xPeriodOfTask[8] == 0)
+        if( xCurrentTime % xPeriodOfTask[0] == 0 )
         {
-           xSemaphoreGive( xBinarySemaphore[21] ); 
+           xSemaphoreGive( xBinarySemaphore[NUMBEROFSERVANT-1] ); 
         }
     }
 }

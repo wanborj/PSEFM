@@ -25,7 +25,7 @@
 #include <avr/io.h>
 #include <avr/signal.h>
 #include <avr/interrupt.h>
-#include </home/wanbo/program/freertos-development/stm32_p103.h>
+#include <stm32_p103.h>
 
 #include "link_fbw.h"
 #include "spi_auto.h"

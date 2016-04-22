@@ -150,7 +150,6 @@ void vParameterInitialise()
         pvParameters[i].xNumOfIn = 0;
         pvParameters[i].xNumOfOut = 0;
         pvParameters[i].xLet = xLetOfServant[i]/portTICK_RATE_MS;
-        pvParameters[i].xFp = xServantTable[i];
         pvParameters[i].xTaskFlag = xTaskOfServant[i]; 
         pvParameters[i].xPeriod = xPeriodOfTask[xTaskOfServant[i]]/portTICK_RATE_MS;
     }
@@ -289,7 +288,6 @@ void vSensor( void * pvParameter )
     portBASE_TYPE xMyFlag = ((struct xParam *) pvMyParameter)->xMyFlag;
     portTickType xLet = ((struct xParam *) pvMyParameter)->xLet;
     portTickType xPeriod = ((struct xParam *) pvMyParameter)->xPeriod;
-    pvServantFunType xMyFun = ((struct xParam *) pvMyParameter)->xFp;
 
     /* set the LET of Servant when it is created */
     vTaskSetxLet(xTaskOfHandle[xMyFlag], xLet);
@@ -322,15 +320,10 @@ void vSensor( void * pvParameter )
             vEventDeleteAll(pvMyParameter, pxEvent);
         }
 
-        //xTaskComplete[ xTaskOfServant[xMyFlag] ] = 0;
-
-        // deal with the input
-        vDoSensor();
-
-        vPrintNumber( xMyFlag );
+        //vPrintNumber( xMyFlag );
 
         xCurrentTime = xTaskGetTickCount();
-        vPrintNumber( xCurrentTime );
+        //vPrintNumber( xCurrentTime );
         vTaskSetxStartTime( xTaskOfHandle[xMyFlag], xCurrentTime );
 
         // xStartTime is the start time of next period which is also the deadline of current period
@@ -354,16 +347,19 @@ void vSensor( void * pvParameter )
 
         vTaskDelayLET();
         xCurrentTime = xTaskGetTickCount();
+        /*
         vPrintNumber( xCurrentTime );
         vPrintNumber( deadline - xPeriod ); // output the ready time of task
         vPrintNumber( deadline );  // output the deadline of task
-        vPrintNumber( ( xMyFlag + 10 ) * 3 );
+        */
+        //vPrintNumber( ( xMyFlag + 10 ) * 3 );
 
         //vPrintString("the start time of next Period: ");
         //vPrintNumber(xDatas[0].xNextPeriod);
         if( xCurrentTime > xDatas[0].xNextPeriod )
         {
             vPrintNumber(xDatas[0].xNextPeriod);
+
             vPrintString("there are sensor missing deadline\n\r");
         }
         // triggered R-Servant to execute 
@@ -388,7 +384,6 @@ void vServant( void * pvParameter )
     portBASE_TYPE xNumOfOut = ((struct xParam *) pvMyParameter)->xNumOfOut;
     portBASE_TYPE xMyFlag = ((struct xParam *) pvMyParameter)->xMyFlag;
     portTickType xPeriod = ((struct xParam *) pvMyParameter)->xPeriod;
-    pvServantFunType xMyFun = ((struct xParam *) pvMyParameter)->xFp;
 
     xEventHandle pxEvent[xNumOfIn];
     struct eventData xDatas[xNumOfOut];
@@ -402,10 +397,10 @@ void vServant( void * pvParameter )
     {
         vEventReceiveAll( pvMyParameter, pxEvent );
 
-        vPrintNumber(xMyFlag);
+        //vPrintNumber(xMyFlag);
 
         xCurrentTime = xTaskGetTickCount();
-        vPrintNumber( xCurrentTime );
+        //vPrintNumber( xCurrentTime );
         vTaskSetxStartTime( xTaskOfHandle[xMyFlag], xCurrentTime );
 
         /* Here are coding for processing data of events */
@@ -428,16 +423,19 @@ void vServant( void * pvParameter )
         {
             vPrintNumber(xDatas[0].xNextPeriod);
             vPrintNumber(xCurrentTime);
+            vPrintNumber(xMyFlag);
             vPrintString("there are servants missing deadline\n\r");
         }
 
         vTaskDelayLET();
 
         xCurrentTime = xTaskGetTickCount();
+        /*
         vPrintNumber( xCurrentTime );
         vPrintNumber( xDatas[0].xNextPeriod - xPeriod ); // output the ready time of task
         vPrintNumber( xDatas[0].xNextPeriod );  // output the deadline of task
-        vPrintNumber( (xMyFlag + 10) * 3 );
+        */
+        //vPrintNumber( (xMyFlag + 10) * 3 );
 
 
         // triggered R-Servant to execute 
@@ -470,7 +468,7 @@ void vR_Servant( void * pvParameter)
 
         vPrintNumber( xMyFlag );
         xCurrentTime = xTaskGetTickCount();
-        vPrintNumber( xCurrentTime );
+        //vPrintNumber( xCurrentTime );
         vTaskSetxStartTime( xTaskOfHandle[xMyFlag], xCurrentTime );
 
         // init to zero
@@ -542,17 +540,12 @@ void vR_Servant( void * pvParameter)
         // not time yet, R-Servant should be sleep until next period of any task
         if( xResult == -1 )
         {
-            vTaskDelayLET();
-            xCurrentTime = xTaskGetTickCount();
-            vPrintNumber( xCurrentTime );
-            vPrintNumber( (xMyFlag + 10) * 3 );
+            //vTaskDelayLET();
             continue; 
         }
         else if ( xResult == 0 )
         {
-            vTaskDelayLET();
-            xCurrentTime = xTaskGetTickCount();
-            vPrintNumber( xCurrentTime );
+            //vTaskDelayLET();
             vPrintNumber( (xMyFlag + 10) * 3 );
             //vPrintString("not time yet\n\r");
             continue;
@@ -571,9 +564,8 @@ void vR_Servant( void * pvParameter)
                 }
             }
 
-            vTaskDelayLET();
-            xCurrentTime = xTaskGetTickCount();
-            vPrintNumber( xCurrentTime );
+            //vTaskDelayLET();
+
             vPrintNumber( (xMyFlag + 10) * 3 );
 
             // send semaphore to destinationtcb
