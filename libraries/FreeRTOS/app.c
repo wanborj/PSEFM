@@ -75,95 +75,65 @@
 #include "semphr.h"
 #include "app.h"
 
-/* the include file of PapaBench */
-#include "ppm.h"
-#include "servo.h"
-#include "spi_fbw.h"
-//#include "inflight_calib.h"
-#include "infrared.h"
-#include "estimator.h"
-#include "pid.h"
-#include "link_fbw.h"
-#include "gps.h"
-#include "autopilot.h"
-#include "nav.h"
-
 
 xSemaphoreHandle xBinarySemaphore[NUMBEROFSERVANT];  // the semaphores which are used to trigger new servant to execute
 xTaskHandle xTaskOfHandle[NUMBEROFSERVANT];         // record the handle of all S-Servant, the last one is for debugging R-Servant 
 //portBASE_TYPE xTaskComplete[NUMBEROFTASK];  // record whether specified task completes execution
-portTickType xPeriodOfTask[NUMBEROFTASK] =
-{
-    200,
-    200
-};
+portTickType xPeriodOfTask[NUMBEROFTASK];
 
 // the LET of all S-Servant (ms)
-portTickType xLetOfServant[NUMBEROFSERVANT] = 
-{ 
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4, //  task 2
-    4,
-    4,
-    4,
-    4,
-    4,
-    4
-};
+portTickType xLetOfServant[NUMBEROFSERVANT];
 
-portBASE_TYPE xTaskOfServant[NUMBEROFSERVANT] =
+portBASE_TYPE xTaskOfServant[NUMBEROFSERVANT];
+
+
+struct xRelationship xRelations;
+
+void vAppInitialise()
 {
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1, // task 2
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-};
+    portBASE_TYPE i, j;
 
-
-struct xRelationship xRelations = 
-{
-    24,
+    for( i = 0; i < NUMBEROFTASK; ++ i )
     {
-        {0,1,1},
-        {0,2,1},
-        {0,3,1},
-        {0,4,1},
-        {0,5,1},
-        {0,6,1},
-        {1,0,1},
-        {2,0,1},
-        {3,0,1},
-        {4,0,1},
-        {5,0,1},
-        {6,0,1},
-        {7,8,1}, // task 2
-        {7,9,1},
-        {7,10,1},
-        {7,11,1},
-        {7,12,1},
-        {7,13,1},
-        {8, 7,1},
-        {9, 7,1},
-        {10,7,1},
-        {11,7,1},
-        {12,7,1},
-        {13,7,1}
+        xPeriodOfTask[i] = 400;
     }
-};
 
+    /* init the LET of all servants including R-servant */
+    for( i = 0; i < NUMBEROFSERVANT; ++ i )
+    {
+        xLetOfServant[i] = 1;
+    }
+    
+    /* init the task id that every servant belong to */ 
+    for( i = 0; i < NUMBEROFTASK; ++ i )
+    {
+        for( j = 0; j <= xConcurrents; ++ j )
+        {
+            xTaskOfServant[i*(xConcurrents + 1)+j] = i;
+        }
+    }
+
+    xRelations.xNumOfRelation = xConcurrents * 2 * NUMBEROFTASK; // every task has 6 S-Servant and one Sensor
+
+    /* from 0 to NUMBEROFTASK*xConcurrents */
+    for( i = 0; i < NUMBEROFTASK; ++ i )
+    {
+        for( j = 1; j <= xConcurrents; ++ j )
+        {
+            xRelations.xRelation[i*(xConcurrents) + j - 1].xInFlag = i*(xConcurrents + 1);
+            xRelations.xRelation[i*(xConcurrents) + j - 1].xOutFlag = i*(xConcurrents + 1) + j;
+            xRelations.xRelation[i*(xConcurrents) + j - 1].xFlag = 1;
+        }
+    }
+
+    /* from NUMBEROFTASK*xConcurrents to 2*NUMBEROFTASK*xConcurrents */
+    for( i = 0; i < NUMBEROFTASK; ++ i )
+    {
+        for( j = 1; j <= xConcurrents; ++ j )
+        {
+            xRelations.xRelation[i*(xConcurrents) + j - 1 + NUMBEROFTASK*xConcurrents].xInFlag = i*(xConcurrents + 1) + j;
+            xRelations.xRelation[i*(xConcurrents) + j - 1 + NUMBEROFTASK*xConcurrents].xOutFlag = i*(xConcurrents + 1) ;
+            xRelations.xRelation[i*(xConcurrents) + j - 1 + NUMBEROFTASK*xConcurrents].xFlag = 1;
+        }
+    }
+}

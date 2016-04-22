@@ -70,12 +70,14 @@
 
 #include "eventlist.h"
 
+#define NUMBEROFTASK 16 
+#define xConcurrents 5   // the concurrent servants of one task. Actually, all servants except the sensor in one task are concurrent servants. 
 
-#define NUMBEROFSERVANT 15 
-#define NUMBEROFTASK 2
-#define MAXRELATION 200 
+#define NUMBEROFSERVANT (NUMBEROFTASK * (xConcurrents + 1) + 1)
+#define MAXRELATION   (NUMBEROFTASK * xConcurrents * 2)  
 
-#define MAXOUTDEGREE 10   // network max in degree of every S-servant
+
+#define MAXOUTDEGREE 10 // network max in degree of every S-servant
 #define MAXINDEGREE 10  // network max out degree of every s-servant
 
 struct sparseRelation
@@ -93,4 +95,5 @@ struct xRelationship
 
 typedef void(* pvServantFunType)(xEventHandle * pxEventArray, portBASE_TYPE NumOfEvent, struct eventData * pxDataArray, portBASE_TYPE NumOfData);
 
+void vAppInitialise();
 #endif

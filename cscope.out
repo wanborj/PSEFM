@@ -1,4 +1,4 @@
-cscope 15 $HOME/program/PSEFM -q 0000018873 0002683449
+cscope 15 $HOME/program/PSEFM -q 0000018852 0002676609
 	@/home/wanbo/program/PSEFM/FreeRTOSConfig.h
 
 54 #i‚de‡
@@ -85,7 +85,7 @@ p‹tBASE_TYPE
 	#c⁄figTOTAL_HEAP_SIZE
  ( ( 
 size_t
- ) ( 40 * 1024 ) )
+ ) ( 70 * 1024 ) )
 
 	)
 
@@ -14816,7 +14816,7 @@ simul_ú_pôch
 >
 
 28 
-	~</home/w™bo/¥ogøm/‰ìπos-devñ›mít/°m32_p103.h
+	~<°m32_p103.h
 >
 
 30 
@@ -93075,789 +93075,217 @@ p‹tTickTy≥
 	gxPîiodOfTask
 [
 NUMBEROFTASK
-] =
+];
 
-113 
+98 
 p‹tTickTy≥
  
 	gxLëOfSîv™t
 [
 NUMBEROFSERVANT
-] =
+];
 
-139 
+100 
 p‹tBASE_TYPE
  
 	gxTaskOfSîv™t
 [
 NUMBEROFSERVANT
-] =
+];
 
-179 
+103 
 xRñ©i⁄shù
  
 	gxRñ©i⁄s
- =
+;
 
-208 
-to_aut›ûŸ_‰om_œ°_ødio
-();
+105 
+	$vAµInôüli£
+()
 
-209 
-check_mega128_vÆues_èsk
-();
-
-210 
-check_Áûß„_èsk
-();
-
-212 
-ødio_c⁄åﬁ_èsk
-();
-
-213 
-£nd_gps_pos
-();
-
-214 
-£nd_ødIR
-();
-
-215 
-£nd_èkeOff
-();
-
-217 
-£nd_boŸ
-();
-
-218 
-£nd_©tôude
-();
-
-219 
-£nd_adc
-();
-
-220 
-£nd_£âögs
-();
-
-221 
-£nd_desúed
-();
-
-222 
-£nd_b©
-();
-
-223 
-£nd_˛imb
-();
-
-224 
-£nd_mode
-();
-
-225 
-£nd_debug
-();
-
-226 
-£nd_«v_ªf
-();
-
-228 
-	#SUNNYBEIKE
- 1
-
-	)
-
-229 #ifde‡
-SUNNYBEIKE
-
-
-238 
-	$s_0
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
+107 
 p‹tBASE_TYPE
  
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-241 
-	`œ°_ødio_‰om_µm
-();
-
-242 
-	}
-}
-
-243 
-	$s_1
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
+i
 , 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-248 
-	}
-}
-
-249 
-	$s_2
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-253 
-	`to_aut›ûŸ_‰om_œ°_ødio
-();
-
-254 
-	}
-}
-
-256 
-	$s_3
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-259 
-	`•i_ª£t
-();
-
-260 
-	}
-}
-
-261 
-	$s_4
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-264 
-	`check_mega128_vÆues_èsk
-();
-
-265 
-	}
-}
-
-267 
-	$s_5
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-270 
-	`£rvo_å™smô
-();
-
-271 
-	}
-}
-
-273 
-	$s_6
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-276 
-	`check_Áûß„_èsk
-();
-
-277 
-	}
-}
-
-278 
-	$s_7
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-284 
-	`ødio_c⁄åﬁ_èsk
-();
-
-285 
-	}
-}
-
-286 
-	$s_8
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-289 
-	`ú_gaö_ˇlib
-();
-
-290 
-	}
-}
-
-291 
-	$s_9
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-294 
-	`ú_upd©e
-();
-
-295 
-	}
-}
-
-296 
-	$s_10
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-301 
-	`e°im©‹_upd©e_°©e_ö‰¨ed
-();
-
-302 
-	}
-}
-
-303 
-	$s_11
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-306 
-	`rﬁl_pôch_pid_run
-();
-
-307 
-	}
-}
-
-309 
-	$s_12
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-312 
-	`lök_fbw_£nd
-();
-
-313 
-	}
-}
-
-314 
-	$s_13
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-318 
-	`∑r£_gps_msg
-();
-
-319 
-	}
-}
-
-321 
-	$s_14
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-325 
-	`£nd_gps_pos
-();
-
-326 
-	`£nd_ødIR
-();
-
-327 
-	`£nd_èkeOff
-();
-
-328 
-	}
-}
-
-331 
-	$s_15
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-334 
-	`«v_home
-();
-
-335 
-	}
-}
-
-336 
-	$s_16
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-340 
-	`«v_upd©e
-();
-
-341 
-	}
-}
-
-343 
-	$s_17
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-345 
-	`cour£_pid_run
-();
-
-346 
-	}
-}
-
-347 
-	$s_18
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-349 
-	`Ætôude_pid_run
-();
-
-350 
-	}
-}
-
-351 
-	$s_19
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-353 
-	`˛imb_pid_run
-();
-
-354 
-	}
-}
-
-355 
-	$s_20
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-)
-
-358 
-	`£nd_boŸ
-();
-
-359 
-	`£nd_©tôude
-();
-
-360 
-	`£nd_adc
-();
-
-361 
-	`£nd_£âögs
-();
-
-362 
-	`£nd_desúed
-();
-
-363 
-	`£nd_b©
-();
-
-364 
-	`£nd_˛imb
-();
-
-365 
-	`£nd_mode
-();
-
-366 
-	`£nd_debug
-();
-
-367 
-	`£nd_«v_ªf
-();
-
-368 
-	}
-}
-
-372 
-pvSîv™tFunTy≥
- 
-	gxSîv™tTabÀ
+j
+;
+
+109  
+i
+ = 0; i < 
+NUMBEROFTASK
+; ++ i )
+
+111 
+xPîiodOfTask
 [
+i
+] = 400;
+
+115  
+i
+ = 0; i < 
 NUMBEROFSERVANT
-] =
+; ++ i )
 
-374 &
-s_0
-,
+117 
+xLëOfSîv™t
+[
+i
+] = 4;
 
-375 &
-s_1
-,
+121  
+i
+ = 0; i < 
+NUMBEROFTASK
+; ++ i )
 
-376 &
-s_2
-,
+123  
+j
+ = 0; j <
+xC⁄cuºíts
+; ++ j )
 
-377 &
-s_3
-,
+125 
+xTaskOfSîv™t
+[
+i
+*7+
+j
+] = i;
 
-378 &
-s_4
-,
+129 
+xRñ©i⁄s
+.
+xNumOfRñ©i⁄
+ = 
+xC⁄cuºíts
+ * 2 * 
+NUMBEROFTASK
+;
 
-379 &
-s_5
-,
+132  
+i
+ = 0; i < 
+NUMBEROFTASK
+; ++ i )
 
-380 &
-s_6
-,
+134  
+j
+ = 1; j <
+xC⁄cuºíts
+; ++ j )
 
-381 &
-s_7
-,
+136 
+xRñ©i⁄s
+.
+xRñ©i⁄
+[
+i
+*(
+xC⁄cuºíts
+Ë+ 
+j
+ - 1].
+xInFœg
+ = i*7;
 
-382 &
-s_8
-,
+137 
+xRñ©i⁄s
+.
+xRñ©i⁄
+[
+i
+*(
+xC⁄cuºíts
+Ë+ 
+j
+ - 1].
+xOutFœg
+ = i*7 + j;
 
-383 &
-s_9
-,
+138 
+xRñ©i⁄s
+.
+xRñ©i⁄
+[
+i
+*(
+xC⁄cuºíts
+Ë+ 
+j
+ - 1].
+xFœg
+ = 1;
 
-384 &
-s_10
-,
+143  
+i
+ = 0; i < 
+NUMBEROFTASK
+; ++ i )
 
-385 &
-s_11
-,
+145  
+j
+ = 1; j <
+xC⁄cuºíts
+; ++ j )
 
-386 &
-s_12
-,
+147 
+xRñ©i⁄s
+.
+xRñ©i⁄
+[
+i
+*(
+xC⁄cuºíts
+Ë+ 
+j
+ - 1 + 
+NUMBEROFTASK
+*xC⁄cuºíts].
+xInFœg
+ = i*7 + j;
 
-387 &
-s_13
-,
+148 
+xRñ©i⁄s
+.
+xRñ©i⁄
+[
+i
+*(
+xC⁄cuºíts
+Ë+ 
+j
+ - 1 + 
+NUMBEROFTASK
+*
+xC⁄cuºít
+].
+xOutFœg
+ = i*7 ;
 
-388 &
-s_14
-,
+149 
+xRñ©i⁄s
+.
+xRñ©i⁄
+[
+i
+*(
+xC⁄cuºíts
+Ë+ 
+j
+ - 1 + 
+NUMBEROFTASK
+*
+xC⁄cuºít
+].
+xFœg
+ = 1;
 
-389 &
-s_15
-,
-
-390 &
-s_16
-,
-
-391 &
-s_17
-,
-
-392 &
-s_18
-,
-
-393 &
-s_19
-,
-
-394 &
-s_20
-,
-
-395 
-NULL
-
+152 
+	}
+}
 
 	@/home/wanbo/program/PSEFM/libraries/FreeRTOS/croutine.c
 
@@ -97791,69 +97219,73 @@ APP_H
 
 74 
 	#NUMBEROFSERVANT
- 22
+ 29
 
 	)
 
 75 
 	#NUMBEROFTASK
- 13
+ 4
 
 	)
 
 76 
 	#MAXRELATION
- 
-NUMBEROFSERVANT
-
+ 200
 
 	)
 
-78 
-	#MAXOUTDEGREE
- 2
+77 
+	#xC⁄cuºíts
+ 6
+
+	)
 
 79 
-	#MAXINDEGREE
- 2
+	#MAXOUTDEGREE
+ 10
 
-80 
+80 
+	#MAXINDEGREE
+ 10
+
+81 
 
 	)
 
-81 
+82 
 	s•¨£Rñ©i⁄
 
 
-83 
+84 
 p‹tBASE_TYPE
  
 	mxInFœg
 ;
 
-84 
+85 
 p‹tBASE_TYPE
  
 	mxOutFœg
 ;
 
-85 
+86 
 p‹tBASE_TYPE
  
 	mxFœg
 ;
 
-88 
+89 
 	sxRñ©i⁄shù
 
 
-90 
+91 
 p‹tBASE_TYPE
  
 	mxNumOfRñ©i⁄
 ;
 
-91 
+92 
 •¨£Rñ©i⁄
  
 	mxRñ©i⁄
@@ -97861,7 +97293,7 @@ p‹tBASE_TYPE
 MAXRELATION
 ];
 
-94 (* 
+95 (* 
 	tpvSîv™tFunTy≥
 )(
 	txEvítH™dÀ
@@ -97878,366 +97310,6 @@ MAXRELATION
 ,Ö‹tBASE_TYPE 
 	tNumOfD©a
 );
-
-96 
-	`s_0
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-97 
-	`s_1
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-98 
-	`s_2
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-99 
-	`s_3
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-100 
-	`s_4
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-101 
-	`s_5
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-102 
-	`s_6
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-103 
-	`s_7
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-104 
-	`s_8
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-105 
-	`s_9
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-106 
-	`s_10
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-107 
-	`s_11
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-108 
-	`s_12
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-109 
-	`s_13
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-110 
-	`s_15
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-111 
-	`s_16
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-112 
-	`s_17
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-113 
-	`s_18
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-114 
-	`s_19
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
-
-115 
-	`s_20
-(
-xEvítH™dÀ
- * 
-pxEvítAºay
-, 
-p‹tBASE_TYPE
- 
-NumOfEvít
-, 
-evítD©a
- * 
-pxD©aAºay
-,Ö‹tBASE_TYPE 
-NumOfD©a
-) ;
 
 	@/home/wanbo/program/PSEFM/libraries/FreeRTOS/include/croutine.h
 
@@ -326751,22 +325823,12 @@ pvP¨amëîs
 [
 i
 ].
-xFp
- = 
-xSîv™tTabÀ
-[i];
-
-154 
-pvP¨amëîs
-[
-i
-].
 xTaskFœg
  = 
 xTaskOfSîv™t
 [i];
 
-155 
+154 
 pvP¨amëîs
 [
 i
@@ -326780,7 +325842,7 @@ xTaskOfSîv™t
 p‹tTICK_RATE_MS
 ;
 
-159  
+158  
 i
  = 0; i < 
 xRñ©i⁄s
@@ -326788,7 +325850,7 @@ xRñ©i⁄s
 xNumOfRñ©i⁄
 ; ++ i )
 
-161 
+160 
 xSour˚
  = 
 xRñ©i⁄s
@@ -326800,7 +325862,7 @@ i
 xInFœg
 ;
 
-162 
+161 
 xDe°
  = 
 xRñ©i⁄s
@@ -326812,7 +325874,7 @@ i
 xOutFœg
 ;
 
-164 
+163 
 pvP¨amëîs
 [
 xSour˚
@@ -326824,7 +325886,7 @@ xNumOfOut
 xDe°
 ;
 
-165 
+164 
 pvP¨amëîs
 [
 xSour˚
@@ -326832,7 +325894,7 @@ xSour˚
 xNumOfOut
  ++;
 
-167 
+166 
 pvP¨amëîs
 [
 xDe°
@@ -326844,7 +325906,7 @@ xNumOfIn
 xSour˚
 ;
 
-168 
+167 
 pvP¨amëîs
 [
 xDe°
@@ -326852,15 +325914,15 @@ xDe°
 xNumOfIn
  ++;
 
-170 
+169 
 	}
 }
 
-172 
+171 
 	$vTaskDñayLET
 ()
 
-174 
+173 
 xTaskH™dÀ
  
 pxTaskCuºítTCBLoˇl
@@ -326868,7 +325930,7 @@ pxTaskCuºítTCBLoˇl
 	`xTaskGëCuºítTaskH™dÀ
 ();
 
-175 
+174 
 p‹tTickTy≥
  
 xSèπTime
@@ -326878,7 +325940,7 @@ xSèπTime
 pxTaskCuºítTCBLoˇl
  );
 
-176 
+175 
 p‹tTickTy≥
  
 xOuçutTime
@@ -326890,7 +325952,7 @@ pxTaskCuºítTCBLoˇl
 xSèπTime
 ;
 
-177 
+176 
 p‹tTickTy≥
  
 xCuºítTime
@@ -326898,23 +325960,23 @@ xCuºítTime
 	`xTaskGëTickCou¡
 ();
 
-179  
+178  
 xCuºítTime
  < 
 xOuçutTime
 )
 
-181 
+180 
 xCuºítTime
  = 
 	`xTaskGëTickCou¡
 ();
 
-183 
+182 
 	}
 }
 
-186 
+185 
 	$vEvítRe˚iveAŒ
 –* 
 pvP¨amëî
@@ -326924,13 +325986,13 @@ xEvítH™dÀ
 pxEvít
  )
 
-188 
+187 
 p‹tBASE_TYPE
  
 i
  ;
 
-190 
+189 
 p‹tBASE_TYPE
  
 NUM
@@ -326942,7 +326004,7 @@ pvP¨amëî
 xNumOfIn
 ;
 
-191 
+190 
 p‹tBASE_TYPE
  
 xInFœg
@@ -326950,7 +326012,7 @@ xInFœg
 NUM
 ];
 
-192 
+191 
 p‹tBASE_TYPE
  
 xMyFœg
@@ -326960,13 +326022,13 @@ xP¨am
 pvP¨amëî
 )->xMyFlag;
 
-193 
+192 
 p‹tTickTy≥
  
 xCuºítTime
 ;
 
-195 
+194 
 	`xSem≠h‹eTake
 –
 xBö¨ySem≠h‹e
@@ -326976,13 +326038,13 @@ xMyFœg
 p‹tMAX_DELAY
  );
 
-197 
+196 
 xCuºítTime
  = 
 	`xTaskGëTickCou¡
 ();
 
-198 
+197 
 	`vTaskSëxSèπTime
 –
 xTaskOfH™dÀ
@@ -326991,6 +326053,10 @@ xMyFœg
 ], 
 xCuºítTime
  );
+
+199 
+	`vPrötNumbî
+(300);
 
 200  
 i
@@ -327023,10 +326089,14 @@ pxCuºítRódyLi°
  );
 
 208 
+	`vPrötNumbî
+(300);
+
+209 
 	}
 }
 
-210 
+211 
 	$vEvítDñëeAŒ
 –* 
 pvP¨amëî
@@ -327036,13 +326106,13 @@ xEvítH™dÀ
 pxEvít
  )
 
-212 
+213 
 p‹tBASE_TYPE
  
 i
  ;
 
-213 
+214 
 p‹tBASE_TYPE
  
 NUM
@@ -327054,13 +326124,13 @@ pvP¨amëî
 xNumOfIn
 ;
 
-215  
+216  
 i
  = 0; i < 
 NUM
 ; ++i )
 
-217 
+218 
 	`vEvítDñëe
 –
 pxEvít
@@ -327068,11 +326138,11 @@ pxEvít
 i
 ] );
 
-219 
+220 
 	}
 }
 
-222 
+223 
 	$vEvítCª©eAŒ
 –* 
 pvP¨amëî
@@ -327082,13 +326152,13 @@ evítD©a
 xD©as
  )
 
-224 
+225 
 p‹tBASE_TYPE
  
 i
  ;
 
-225 
+226 
 p‹tBASE_TYPE
  
 NUM
@@ -327100,7 +326170,7 @@ pvP¨amëî
 xNumOfOut
 ;
 
-226 
+227 
 p‹tBASE_TYPE
  
 xMyFœg
@@ -327110,7 +326180,7 @@ xP¨am
 pvP¨amëî
 )->xMyFlag;
 
-227 
+228 
 p‹tTickTy≥
  
 xPîiod
@@ -327120,7 +326190,7 @@ xP¨am
 pvP¨amëî
 )->xPeriod;
 
-228 
+229 
 p‹tBASE_TYPE
  
 xFœgs
@@ -327128,13 +326198,13 @@ xFœgs
 NUM
 ];
 
-230  
+231  
 i
  = 0; i < 
 NUM
 ; i ++ )
 
-233 
+234 
 xFœgs
 [
 i
@@ -327146,7 +326216,7 @@ pvP¨amëî
 xOutFœg
 [i];
 
-236 if–
+237 if–
 xFœgs
 [
 i
@@ -327154,7 +326224,7 @@ i
 xMyFœg
  )
 
-238 
+239 
 xD©as
 [
 i
@@ -327162,7 +326232,7 @@ i
 IS_LAST_SERVANT
  = 1;
 
-242 
+243 
 xD©as
 [
 i
@@ -327170,7 +326240,7 @@ i
 IS_LAST_SERVANT
  = 0;
 
-245 
+246 
 	`vEvítCª©e
 (
 xTaskOfH™dÀ
@@ -327182,11 +326252,11 @@ i
 xD©as
 [i]) ;
 
-247 
+248 
 	}
 }
 
-249 
+250 
 	$vDoA˘u©‹
 –
 xEvítH™dÀ
@@ -327194,61 +326264,61 @@ xEvítH™dÀ
 pxEvít
 )
 
-263 
+264 
 	}
 }
 
-265 
+266 
 	$vDoSís‹
 ()
 
-268 
+269 
 	}
 }
 
-277 
+278 
 	$vSís‹
 –* 
 pvP¨amëî
  )
 
-279 
+280 
 p‹tTickTy≥
  
 xCuºítTime
 ;
 
-280 
+281 
 p‹tTickTy≥
  
 dódlöe
 ;
 
-281 
+282 
 p‹tBASE_TYPE
  
 i
 ;
 
-282 
+283 
 p‹tBASE_TYPE
  
 IS_FIRST_TIME_TO_EXE
  = 1;
 
-283 
+284 
 p‹tBASE_TYPE
  
 xCou¡
  = 1;
 
-286 * 
+287 * 
 pvMyP¨amëî
  = 
 pvP¨amëî
 ;
 
-288 
+289 
 p‹tBASE_TYPE
  
 NUM
@@ -327260,7 +326330,7 @@ pvMyP¨amëî
 xNumOfOut
 ;
 
-289 
+290 
 p‹tBASE_TYPE
  
 xMyFœg
@@ -327270,7 +326340,7 @@ xP¨am
 pvMyP¨amëî
 )->xMyFlag;
 
-290 
+291 
 p‹tTickTy≥
  
 xLë
@@ -327280,7 +326350,7 @@ xP¨am
 pvMyP¨amëî
 )->xLet;
 
-291 
+292 
 p‹tTickTy≥
  
 xPîiod
@@ -327289,18 +326359,6 @@ xP¨am
  *Ë
 pvMyP¨amëî
 )->xPeriod;
-
-292 
-pvSîv™tFunTy≥
- 
-xMyFun
- = ((
-xP¨am
- *Ë
-pvMyP¨amëî
-)->
-xFp
-;
 
 295 
 	`vTaskSëxLë
@@ -327368,29 +326426,13 @@ pvMyP¨amëî
 pxEvít
 );
 
-328 
-	`vDoSís‹
-();
-
-330 
-	`vPrötNumbî
-–
-xMyFœg
- );
-
-332 
+327 
 xCuºítTime
  = 
 	`xTaskGëTickCou¡
 ();
 
-333 
-	`vPrötNumbî
-–
-xCuºítTime
- );
-
-334 
+329 
 	`vTaskSëxSèπTime
 –
 xTaskOfH™dÀ
@@ -327400,11 +326442,11 @@ xMyFœg
 xCuºítTime
  );
 
-337 
+332 
 xCou¡
  ++;
 
-338 
+333 
 dódlöe
  = 
 xCou¡
@@ -327412,13 +326454,13 @@ xCou¡
 xPîiod
 ;
 
-340  
+335  
 i
  = 0; i < 
 NUM
 ; i ++ )
 
-342 
+337 
 xD©as
 [
 i
@@ -327428,7 +326470,7 @@ xNextPîiod
 dódlöe
 ;
 
-343 
+338 
 xD©as
 [
 i
@@ -327440,7 +326482,11 @@ xCuºítTime
 xLë
 ;
 
-347 
+342 
+	`vPrötNumbî
+(200);
+
+343 
 	`vEvítCª©eAŒ
 –
 pvMyP¨amëî
@@ -327448,49 +326494,27 @@ pvMyP¨amëî
 xD©as
  );
 
-350  
+344 
+	`vPrötNumbî
+(200);
+
+347  
 i
  = 0; i < 
 xFun˘i⁄Times
 ; ++ i )
 
-355 
+352 
 	`vTaskDñayLET
 ();
 
-356 
+353 
 xCuºítTime
  = 
 	`xTaskGëTickCou¡
 ();
 
-357 
-	`vPrötNumbî
-–
-xCuºítTime
- );
-
-358 
-	`vPrötNumbî
-–
-dódlöe
- - 
-xPîiod
- );
-
-359 
-	`vPrötNumbî
-–
-dódlöe
- );
-
-360 
-	`vPrötNumbî
-––
-xMyFœg
- + 10 ) * 3 );
-
-364 if–
+363 if–
 xCuºítTime
  > 
 xD©as
@@ -327498,7 +326522,7 @@ xD©as
 xNextPîiod
  )
 
-366 
+365 
 	`vPrötNumbî
 (
 xD©as
@@ -327586,19 +326610,7 @@ xP¨am
 pvMyP¨amëî
 )->xPeriod;
 
-391 
-pvSîv™tFunTy≥
- 
-xMyFun
- = ((
-xP¨am
- *Ë
-pvMyP¨amëî
-)->
-xFp
-;
-
-393 
+392 
 xEvítH™dÀ
  
 pxEvít
@@ -327606,7 +326618,7 @@ pxEvít
 xNumOfIn
 ];
 
-394 
+393 
 evítD©a
  
 xD©as
@@ -327614,7 +326626,7 @@ xD©as
 xNumOfOut
 ];
 
-397 
+396 
 p‹tTickTy≥
  
 xLë
@@ -327624,7 +326636,7 @@ xP¨am
 pvMyP¨amëî
 )->xLet;
 
-399 
+398 
 	`vTaskSëxLë
 (
 xTaskOfH™dÀ
@@ -327634,7 +326646,7 @@ xMyFœg
 xLë
 );
 
-403 
+402 
 	`vEvítRe˚iveAŒ
 –
 pvMyP¨amëî
@@ -327642,25 +326654,13 @@ pvMyP¨amëî
 pxEvít
  );
 
-405 
-	`vPrötNumbî
-(
-xMyFœg
-);
-
-407 
+406 
 xCuºítTime
  = 
 	`xTaskGëTickCou¡
 ();
 
 408 
-	`vPrötNumbî
-–
-xCuºítTime
- );
-
-409 
 	`vTaskSëxSèπTime
 –
 xTaskOfH™dÀ
@@ -327670,13 +326670,13 @@ xMyFœg
 xCuºítTime
  );
 
-412  
+411  
 i
  = 0; i < 
 xNumOfOut
 ; i ++ )
 
-414 
+413 
 xD©as
 [
 i
@@ -327686,7 +326686,7 @@ i
 pxEvít
 [i]);
 
-415 
+414 
 xD©as
 [
 i
@@ -327698,19 +326698,23 @@ xCuºítTime
 xLë
 ;
 
-418  
+417  
 i
  = 0; i < 
 xFun˘i⁄Times
 ; ++ i )
 
-423 
+422 
 	`vEvítDñëeAŒ
 –
 pvMyP¨amëî
 , 
 pxEvít
  );
+
+424 
+	`vPrötNumbî
+(200);
 
 425 
 	`vEvítCª©eAŒ
@@ -327720,7 +326724,11 @@ pvMyP¨amëî
 xD©as
  );
 
-427 if–
+426 
+	`vPrötNumbî
+(200);
+
+428 if–
 xCuºítTime
  > 
 xD©as
@@ -327728,7 +326736,7 @@ xD©as
 xNextPîiod
  )
 
-429 
+430 
 	`vPrötNumbî
 (
 xD©as
@@ -327736,57 +326744,33 @@ xD©as
 xNextPîiod
 );
 
-430 
+431 
 	`vPrötNumbî
 (
 xCuºítTime
 );
 
-431 
+432 
+	`vPrötNumbî
+(
+xMyFœg
+);
+
+433 
 	`vPrötSåög
 ("thereáre servants missing deadline\n\r");
 
-434 
+436 
 	`vTaskDñayLET
 ();
 
-436 
+438 
 xCuºítTime
  = 
 	`xTaskGëTickCou¡
 ();
 
-437 
-	`vPrötNumbî
-–
-xCuºítTime
- );
-
-438 
-	`vPrötNumbî
-–
-xD©as
-[0].
-xNextPîiod
- - 
-xPîiod
- );
-
-439 
-	`vPrötNumbî
-–
-xD©as
-[0].
-xNextPîiod
- );
-
-440 
-	`vPrötNumbî
-–(
-xMyFœg
- + 10) * 3 );
-
-444 
+448 
 	`xSem≠h‹eGive
 –
 xBö¨ySem≠h‹e
@@ -327794,17 +326778,17 @@ xBö¨ySem≠h‹e
 NUMBEROFSERVANT
 -1] );
 
-447 
+451 
 	}
 }
 
-449 
+453 
 	$vR_Sîv™t
 –* 
 pvP¨amëî
 )
 
-451 
+455 
 p‹tBASE_TYPE
  
 i
@@ -327812,7 +326796,7 @@ i
 j
 ;
 
-452 
+456 
 p‹tBASE_TYPE
  
 xSour˚
@@ -327820,31 +326804,31 @@ xSour˚
 xDe°
 ;
 
-453 
+457 
 p‹tBASE_TYPE
  
 HAVE_TO_SEND_SEMAPHORE
 ;
 
-454 
+458 
 p‹tBASE_TYPE
  
 xResu…
 ;
 
-456 
+460 
 p‹tTickTy≥
  
 xCuºítTime
 ;
 
-457 * 
+461 * 
 pvMyP¨amëî
  = 
 pvP¨amëî
 ;
 
-459 
+463 
 p‹tBASE_TYPE
  
 xMyFœg
@@ -327854,7 +326838,7 @@ xP¨am
 pvMyP¨amëî
 )->xMyFlag;
 
-460 
+464 
 p‹tTickTy≥
  
 xLë
@@ -327864,7 +326848,7 @@ xP¨am
 pvMyP¨amëî
 )->xLet;
 
-461 
+465 
 	`vTaskSëxLë
 (
 xTaskOfH™dÀ
@@ -327874,13 +326858,13 @@ xMyFœg
 xLë
 );
 
-463 
+467 
 xLi°Iãm
  * 
 pxEvítLi°Iãm
 ;
 
-464 
+468 
 xTaskH™dÀ
  
 de°ö©i⁄TCB
@@ -327888,7 +326872,7 @@ de°ö©i⁄TCB
 sour˚TCB
 ;
 
-469 
+473 
 	`xSem≠h‹eTake
 –
 xBö¨ySem≠h‹e
@@ -327898,25 +326882,17 @@ xMyFœg
 p‹tMAX_DELAY
  );
 
-471 
+475 
 	`vPrötNumbî
-–
-xMyFœg
- );
+( 400 );
 
-472 
+476 
 xCuºítTime
  = 
 	`xTaskGëTickCou¡
 ();
 
-473 
-	`vPrötNumbî
-–
-xCuºítTime
- );
-
-474 
+478 
 	`vTaskSëxSèπTime
 –
 xTaskOfH™dÀ
@@ -327926,15 +326902,15 @@ xMyFœg
 xCuºítTime
  );
 
-477 
+481 
 HAVE_TO_SEND_SEMAPHORE
  = 0;
 
-481 ! 
+485 ! 
 HAVE_TO_SEND_SEMAPHORE
 )
 
-488 
+492 
 xResu…
  = 
 	`xEvítLi°Tønsô
@@ -327944,15 +326920,15 @@ pxEvítLi°Iãm
 pxCuºítRódyLi°
 );
 
-489 if–
+493 if–
 xResu…
  == -1 )
 
-494 if–
+498 if–
 xResu…
  == 0 )
 
-504 
+508 
 de°ö©i⁄TCB
  = 
 	`xEvítGëpxDe°ö©i⁄
@@ -327962,7 +326938,7 @@ pxEvítLi°Iãm
 pvOw√r
 );
 
-505 
+509 
 sour˚TCB
  = 
 	`xEvítGëpxSour˚
@@ -327972,11 +326948,11 @@ pxEvítLi°Iãm
 pvOw√r
  );
 
-506 
+510 
 HAVE_TO_SEND_SEMAPHORE
  = 1;
 
-508  
+512  
 i
  = 0; i < 
 xRñ©i⁄s
@@ -327984,7 +326960,7 @@ xRñ©i⁄s
 xNumOfRñ©i⁄
 ; ++ i )
 
-510 
+514 
 xSour˚
  = 
 xRñ©i⁄s
@@ -327996,7 +326972,7 @@ i
 xInFœg
 ;
 
-511 
+515 
 xDe°
  = 
 xRñ©i⁄s
@@ -328008,7 +326984,7 @@ i
 xOutFœg
 ;
 
-513 if–
+517 if–
 de°ö©i⁄TCB
  =
 xTaskOfH™dÀ
@@ -328016,7 +326992,7 @@ xTaskOfH™dÀ
 xDe°
 ] )
 
-516 if–
+520 if–
 sour˚TCB
  =
 xTaskOfH™dÀ
@@ -328024,7 +327000,7 @@ xTaskOfH™dÀ
 xSour˚
 ] )
 
-518 if–
+522 if–
 xRñ©i⁄s
 .
 xRñ©i⁄
@@ -328034,11 +327010,11 @@ i
 xFœg
  == 2 )
 
-520 
+524 
 	`vPrötSåög
 ("Error: ThisÉvent hasárrived!!\n\r") ;
 
-521 
+525 
 	`vEvítDñëe
 –(
 xEvítH™dÀ
@@ -328048,7 +327024,7 @@ pxEvítLi°Iãm
 pvOw√r
  );
 
-526 
+530 
 xRñ©i⁄s
 .
 xRñ©i⁄
@@ -328058,7 +327034,7 @@ i
 xFœg
  = 2;
 
-533 if–
+537 if–
 xRñ©i⁄s
 .
 xRñ©i⁄
@@ -328068,63 +327044,23 @@ i
 xFœg
  == 1 )
 
-535 
+539 
 HAVE_TO_SEND_SEMAPHORE
  = 0;
 
-543 if–
+547 if–
 xResu…
  == -1 )
 
-545 
-	`vTaskDñayLET
-();
-
-546 
-xCuºítTime
- = 
-	`xTaskGëTickCou¡
-();
-
-547 
-	`vPrötNumbî
-–
-xCuºítTime
- );
-
-548 
-	`vPrötNumbî
-–(
-xMyFœg
- + 10) * 3 );
-
-551 i‡–
+552 i‡–
 xResu…
  == 0 )
 
-553 
-	`vTaskDñayLET
-();
-
-554 
-xCuºítTime
- = 
-	`xTaskGëTickCou¡
-();
-
 555 
 	`vPrötNumbî
-–
-xCuºítTime
- );
+( 400 );
 
-556 
-	`vPrötNumbî
-–(
-xMyFœg
- + 10) * 3 );
-
-563  
+562  
 i
  = 0; i < 
 xRñ©i⁄s
@@ -328132,7 +327068,7 @@ xRñ©i⁄s
 xNumOfRñ©i⁄
 ; ++ i )
 
-565 
+564 
 xDe°
  = 
 xRñ©i⁄s
@@ -328144,7 +327080,7 @@ i
 xOutFœg
 ;
 
-566 if–
+565 if–
 de°ö©i⁄TCB
  =
 xTaskOfH™dÀ
@@ -328152,7 +327088,7 @@ xTaskOfH™dÀ
 xDe°
 ] )
 
-568 
+567 
 xRñ©i⁄s
 .
 xRñ©i⁄
@@ -328162,35 +327098,17 @@ i
 xFœg
  = 1;
 
-570 
+569 
 j
  = 
 xDe°
 ;
 
-574 
-	`vTaskDñayLET
-();
-
 575 
-xCuºítTime
- = 
-	`xTaskGëTickCou¡
-();
-
-576 
 	`vPrötNumbî
-–
-xCuºítTime
- );
+( 400 );
 
-577 
-	`vPrötNumbî
-–(
-xMyFœg
- + 10) * 3 );
-
-580 
+578 
 	`xSem≠h‹eGive
 –
 xBö¨ySem≠h‹e
@@ -328198,7 +327116,7 @@ xBö¨ySem≠h‹e
 j
 ] );
 
-583 
+581 
 	}
 }
 
@@ -404074,43 +402992,95 @@ tskIDLE_PRIORITY
 xTaskOfH™dÀ
 [NUMBEROFSERVANT-1]);
 
-65 
+62 
+p‹tBASE_TYPE
+ 
+i
+,
+j
+;
+
+64  
+i
+ = 0; i < 
+NUMBEROFTASK
+; ++i )
+
+66 
+	`xTaskCª©e
+–
+vSís‹
+, "Sís‹", 
+SERVANT_STACK_SIZE
+, (*)&
+pvP¨amëîs
+[
+i
+*7],
+tskIDLE_PRIORITY
+ + i + 1, &
+xTaskOfH™dÀ
+[i*7]);
+
+67  
+j
+ = 1; j <= 6; ++j )
+
+70 
+	`xTaskCª©e
+–
+vSîv™t
+, "£rv™t", 
+SERVANT_STACK_SIZE
+, (*)&
+pvP¨amëîs
+[
+i
+*7 + 
+j
+],
+tskIDLE_PRIORITY
+ + i + 1, &
+xTaskOfH™dÀ
+[i*7 + j]);
+
+76 
 	`vTaskSèπScheduÀr
 ();
 
-68 
+79 
 	}
 }
 
-70 
+81 
 	$myTø˚Cª©e
  (){
 
-71 
+82 
 	}
 }
 
-73 
+84 
 	$myTø˚SwôchedIn
  (){
 
-74 
+85 
 	}
 }
 
-76 
+87 
 	$myTø˚SwôchedOut
  (){
 
-77 
+88 
 	}
 }
 
-97 
+108 
 	$vAµliˇti⁄TickHook
 ( )
 
-99 
+110 
 p‹tTickTy≥
  
 xCuºítTime
@@ -404118,129 +403088,55 @@ xCuºítTime
 	`xTaskGëTickCou¡
 ();
 
-100 if–
+111 
+p‹tBASE_TYPE
+ 
+i
+ ;
+
+112 if–
 IS_INIT
  =1 && 
 xCuºítTime
  == 100 )
 
-102 
+115  
+i
+ = 0; i < 
+NUMBEROFTASK
+; ++ i )
+
+116 
 	`xSem≠h‹eGive
 –
 xBö¨ySem≠h‹e
-[0] );
+[
+i
+*7] );
 
-103 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[2] );
-
-104 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[7] );
-
-105 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[4] );
-
-106 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[5] );
-
-107 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[6] );
-
-108 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[9] );
-
-109 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[12] );
-
-110 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[13] );
-
-111 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[15] );
-
-112 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[18] );
-
-113 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[19] );
-
-114 
-	`xSem≠h‹eGive
-–
-xBö¨ySem≠h‹e
-[20] );
-
-115 
+118 
 IS_INIT
  = 0;
 
-120 if–
+123 if–
 xCuºítTime
  >
 xPîiodOfTask
 [0] * 2 )
 
-122 if–
+125 if–
 xCuºítTime
  % 
 xPîiodOfTask
-[0] == 0 ||
-
-123 
-xCuºítTime
- % 
-xPîiodOfTask
-[2] == 0 ||
-
-124 
-xCuºítTime
- % 
-xPîiodOfTask
-[12] == 0 ||
-
-125 
-xCuºítTime
- % 
-xPîiodOfTask
-[8] == 0)
+[0] == 0 )
 
 127 
 	`xSem≠h‹eGive
 –
 xBö¨ySem≠h‹e
-[21] );
+[
+NUMBEROFSERVANT
+-1] );
 
 130 
 	}
@@ -405116,7 +404012,7 @@ p‹tBASE_TYPE
 	#c⁄figTOTAL_HEAP_SIZE
  ( ( 
 size_t
- ) ( 40 * 1024 ) )
+ ) ( 70 * 1024 ) )
 
 	)
 
