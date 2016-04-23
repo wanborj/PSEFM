@@ -196,7 +196,7 @@ void vEventReceiveAll( void * pvParameter, xEventHandle *pxEvent )
     xCurrentTime = xTaskGetTickCount(); 
     vTaskSetxStartTime( xTaskOfHandle[xMyFlag], xCurrentTime );
 
-    vPrintNumber(300);
+    //vPrintNumber(300);
     for( i = 0; i < NUM; i ++ )
     {
         // get all the in flag
@@ -205,7 +205,7 @@ void vEventReceiveAll( void * pvParameter, xEventHandle *pxEvent )
         // them back to current Servant through the inout point
         vEventReceive( &pxEvent[i], xTaskOfHandle[xInFlag[i]], pxCurrentReadyList );
     }
-    vPrintNumber(300);
+    //vPrintNumber(300);
 }
 
 void vEventDeleteAll( void * pvParameter, xEventHandle * pxEvent )
@@ -318,6 +318,7 @@ void vSensor( void * pvParameter )
             * */
             vEventReceiveAll( pvMyParameter, pxEvent );
             // deal with the output things and seeing whether current task misses deadline
+            vPrintNumber(xMyFlag);
             vDoActuator(pxEvent);
             vEventDeleteAll(pvMyParameter, pxEvent);
         }
@@ -339,9 +340,9 @@ void vSensor( void * pvParameter )
         }
 
         // create events for all destination servants of this servant. 
-        vPrintNumber(200);
+        //vPrintNumber(200);
         vEventCreateAll( pvMyParameter, xDatas );
-        vPrintNumber(200);
+        //vPrintNumber(200);
 
         // this is the first s-servant
         for( i = 0; i < xFunctionTimes; ++ i )
@@ -351,11 +352,6 @@ void vSensor( void * pvParameter )
 
         vTaskDelayLET();
         xCurrentTime = xTaskGetTickCount();
-        /*
-        vPrintNumber( xCurrentTime );
-        vPrintNumber( deadline - xPeriod ); // output the ready time of task
-        vPrintNumber( deadline );  // output the deadline of task
-        */
         //vPrintNumber( ( xMyFlag + 10 ) * 3 );
 
         //vPrintString("the start time of next Period: ");
@@ -366,7 +362,8 @@ void vSensor( void * pvParameter )
 
             vPrintString("there are sensor missing deadline\n\r");
         }
-        // triggered R-Servant to execute 
+        // triggered R-Servant to execute, print the R-Servant id
+        vPrintNumber( 10 );
         xSemaphoreGive( xBinarySemaphore[NUMBEROFSERVANT-1] );
     }
 }
@@ -400,8 +397,7 @@ void vServant( void * pvParameter )
     while(1)
     {
         vEventReceiveAll( pvMyParameter, pxEvent );
-
-        //vPrintNumber(xMyFlag);
+        vPrintNumber(xMyFlag);
 
         xCurrentTime = xTaskGetTickCount();
         //vPrintNumber( xCurrentTime );
@@ -421,9 +417,9 @@ void vServant( void * pvParameter )
 
         vEventDeleteAll( pvMyParameter, pxEvent );        
 
-        vPrintNumber(200);
+        //vPrintNumber(200);
         vEventCreateAll( pvMyParameter, xDatas );
-        vPrintNumber(200);
+        //vPrintNumber(200);
 
         if( xCurrentTime > xDatas[0].xNextPeriod )
         {
@@ -445,6 +441,7 @@ void vServant( void * pvParameter )
 
 
         // triggered R-Servant to execute 
+        vPrintNumber( 10 );
         xSemaphoreGive( xBinarySemaphore[NUMBEROFSERVANT-1] );
         
     }
@@ -471,8 +468,7 @@ void vR_Servant( void * pvParameter)
     {
         // waiting for events created by tick hook or S-Servant
         xSemaphoreTake( xBinarySemaphore[xMyFlag], portMAX_DELAY );
-
-        vPrintNumber( 400 );
+        vPrintNumber( 10 );
         xCurrentTime = xTaskGetTickCount();
         //vPrintNumber( xCurrentTime );
         vTaskSetxStartTime( xTaskOfHandle[xMyFlag], xCurrentTime );
@@ -572,7 +568,7 @@ void vR_Servant( void * pvParameter)
 
             //vTaskDelayLET();
 
-            vPrintNumber( 400 );
+            vPrintNumber( j );
 
             // send semaphore to destinationtcb
             xSemaphoreGive( xBinarySemaphore[j] );
