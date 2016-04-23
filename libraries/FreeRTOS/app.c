@@ -95,7 +95,7 @@ void vAppInitialise()
 
     for( i = 0; i < NUMBEROFTASK; ++ i )
     {
-        xPeriodOfTask[i] = 400;
+        xPeriodOfTask[i] = 600;
     }
 
     /* init the LET of all servants including R-servant */
