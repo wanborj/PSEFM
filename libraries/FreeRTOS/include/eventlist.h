@@ -89,7 +89,7 @@ extern "C" {
  * */
 struct timeStamp 
 {
-    portTickType xSlackTime;   /*< the slack time of destination servant in task which is used to sort the events in xEventList, and smaller xSlackTime with higher priority >*/
+    portTickType xDeadline;   /*< the slack time of destination servant in task which is used to sort the events in xEventList, and smaller xSlackTime with higher priority >*/
     portTickType xTime;             /*< the time to be proecessed >*/
     portBASE_TYPE xMicroStep;            /*< the order produced by the relationship between S-Servant >*/
     portBASE_TYPE xLevel;                /*< the order produced by topology sort which dosen't take the shared resource dependencies into consideration>*/
@@ -105,6 +105,10 @@ struct eventData
 };
 
 typedef void * xEventHandle;
+
+void vInitialiseEventLists(portBASE_TYPE NumOfEvents);
+
+portBASE_TYPE Is_Executable_Event_Arrive();
 
 xTaskHandle xEventGetpxSource( xEventHandle pxEvent );
 

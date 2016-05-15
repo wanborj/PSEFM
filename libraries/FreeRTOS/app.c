@@ -95,7 +95,7 @@ void vAppInitialise()
 
     for( i = 0; i < NUMBEROFTASK; ++ i )
     {
-        xPeriodOfTask[i] = 40;
+        xPeriodOfTask[i] = 400;
     }
 
     /* init the LET of all servants including R-servant */
@@ -115,7 +115,7 @@ void vAppInitialise()
 
     xRelations.xNumOfRelation = xConcurrents * 2 * NUMBEROFTASK; // every task has 6 S-Servant and one Sensor
 
-    /* from 0 to NUMBEROFTASK*xConcurrents */
+    /* from 0 to NUMBEROFTASK*xConcurrents, relationship from sensor to S-Servant */
     for( i = 0; i < NUMBEROFTASK; ++ i )
     {
         for( j = 1; j <= xConcurrents; ++ j )
@@ -126,7 +126,7 @@ void vAppInitialise()
         }
     }
 
-    /* from NUMBEROFTASK*xConcurrents to 2*NUMBEROFTASK*xConcurrents */
+    /* from NUMBEROFTASK*xConcurrents to 2*NUMBEROFTASK*xConcurrents, relationship from S-Servant to sensor */
     for( i = 0; i < NUMBEROFTASK; ++ i )
     {
         for( j = 1; j <= xConcurrents; ++ j )

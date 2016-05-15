@@ -16,7 +16,7 @@ FREERTOS_PORT_INC = $(FREERTOS_SRC)/portable/GCC/ARM_$(ARCHCM)/
 
 all: main.bin
 
-		#-gdwarf-2 -g3 \
+
 
 main.bin: main.c
 	$(CROSS_COMPILE)gcc \
@@ -30,6 +30,7 @@ main.bin: main.c
 		-I$(PAPA_VAR_INC) \
 		-I$(PAPA_AUTO_INC) \
 		-I$(PAPA_FBW_INC) \
+		-gdwarf-2 -g3 \
 		-fno-common \
 		-mcpu=cortex-m3 -mthumb \
 		-o main.elf \

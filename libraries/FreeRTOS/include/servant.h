@@ -97,7 +97,6 @@ struct xParam
     portBASE_TYPE xTaskFlag;
 };
 
-void vTaskCompleteInitialise();
 
 /*
  * create semaphores for every S-Servant. 

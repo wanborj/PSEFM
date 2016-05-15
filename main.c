@@ -54,6 +54,7 @@ int main(void)
     vAppInitialise();
     vSemaphoreInitialise();
     vParameterInitialise(); 
+    vInitialiseEventLists(NUMBEROFEVENTS);
 
 
     xTaskCreate( vR_Servant, "R-Servant", SERVANT_STACK_SIZE, (void *)&pvParameters[NUMBEROFSERVANT-1],tskIDLE_PRIORITY + 1, &xTaskOfHandle[NUMBEROFSERVANT-1]);
@@ -108,7 +109,7 @@ void vApplicationTickHook( void )
 {
     portTickType xCurrentTime = xTaskGetTickCount();
     portBASE_TYPE i ;
-    if( IS_INIT == 1 && xCurrentTime == 40 )
+    if( IS_INIT == 1 && xCurrentTime == 400 )
     {
         
         for( i = 0; i < NUMBEROFTASK; ++ i )
@@ -119,11 +120,8 @@ void vApplicationTickHook( void )
     
     // send semaphore to R-Servant to triggered it to cope with events 
     // when time meeting the start time of task period
-    if( xCurrentTime >= xPeriodOfTask[0] * 2 )
+    if(Is_Executable_Event_Arrive())
     {
-        if( xCurrentTime % xPeriodOfTask[0] == 0 )
-        {
-           xSemaphoreGive( xBinarySemaphore[NUMBEROFSERVANT-1] ); 
-        }
+       xSemaphoreGive( xBinarySemaphore[NUMBEROFSERVANT-1] ); 
     }
 }
