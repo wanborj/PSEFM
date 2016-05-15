@@ -95,13 +95,13 @@ void vAppInitialise()
 
     for( i = 0; i < NUMBEROFTASK; ++ i )
     {
-        xPeriodOfTask[i] = 600;
+        xPeriodOfTask[i] = 40;
     }
 
     /* init the LET of all servants including R-servant */
     for( i = 0; i < NUMBEROFSERVANT; ++ i )
     {
-        xLetOfServant[i] = 1;
+        xLetOfServant[i] = 10;
     }
     
     /* init the task id that every servant belong to */ 

@@ -72,6 +72,7 @@
 
 #define NUMBEROFTASK 1 
 #define xConcurrents 2   // the concurrent servants of one task. Actually, all servants except the sensor in one task are concurrent servants. 
+#define NUMBEROFEVENTS (xConcurrents * NUMBEROFTASK)
 
 #define NUMBEROFSERVANT (NUMBEROFTASK * (xConcurrents + 1) + 1)
 #define MAXRELATION   (NUMBEROFTASK * xConcurrents * 2)  

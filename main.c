@@ -53,7 +53,7 @@ int main(void)
     //vTaskCompleteInitialise();
     vAppInitialise();
     vSemaphoreInitialise();
-    vParameterInitialise();
+    vParameterInitialise(); 
 
 
     xTaskCreate( vR_Servant, "R-Servant", SERVANT_STACK_SIZE, (void *)&pvParameters[NUMBEROFSERVANT-1],tskIDLE_PRIORITY + 1, &xTaskOfHandle[NUMBEROFSERVANT-1]);
@@ -108,7 +108,7 @@ void vApplicationTickHook( void )
 {
     portTickType xCurrentTime = xTaskGetTickCount();
     portBASE_TYPE i ;
-    if( IS_INIT == 1 && xCurrentTime == 100 )
+    if( IS_INIT == 1 && xCurrentTime == 40 )
     {
         
         for( i = 0; i < NUMBEROFTASK; ++ i )
