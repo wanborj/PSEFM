@@ -153,6 +153,10 @@ void vInitialiseEventLists( portBASE_TYPE NumOfEvents)
     for( i = 0; i < NumOfEvents; ++i )
     {
         pxIdleEvents[i] = (eveECB *) pvPortMalloc(sizeof(eveECB)); 
+        if( pxIdleEvents[i] == NULL )
+        {
+            vPrintString("No enough memory\n\r");
+        }
         vListIntialiseEventItem( pxIdleEvents[i], (xListItem *) & pxIdleEvents[i]->xEventListItem );
         vListInsertEnd(&xEventIdleList, &pxIdleEvents[i]->xEventListItem); 
     }
@@ -410,9 +414,9 @@ void vEventGenericCreate( xTaskHandle pxDestination, struct eventData pdData)
     vListRemove( (xListItem *)&pxNewEvent->xEventListItem );
     if( pxNewEvent == NULL )
     {
-        vPrintString("malloc for event stack failed\n\r");
+        vPrintString("The event point is null\n\r");
     }
-    if ( pxNewEvent != NULL )
+    else
     {
         pxNewEvent->pxSource = pxCurrentTCBLocal;
         pxNewEvent->pxDestination = pxDestination;
@@ -421,8 +425,6 @@ void vEventGenericCreate( xTaskHandle pxDestination, struct eventData pdData)
         vEventSetxData( pxNewEvent, pdData );
 
         vEventSetxTimeStamp( pxNewEvent );
-
-        vListIntialiseEventItem( pxNewEvent, (xListItem *) &pxNewEvent->xEventListItem );
 
         // insert the event into eventpool with O(1)
         vListInsertEnd(&xEventPool, (xListItem *)& pxNewEvent->xEventListItem);
@@ -520,11 +522,6 @@ portBASE_TYPE xEventListGenericTransit( xListItem ** pxEventListItem, xList ** p
 void vEventGenericReceive( xEventHandle * pxEvent, xTaskHandle pxSource, xList * pxList )
 {
     xList * const pxConstList = pxList; 
-    if (pxList == &xEventReadyList[0])
-    {
-        //successful.
-        //helloworld();
-    }
 
     if( listLIST_IS_EMPTY( pxList ) )
     {
@@ -533,7 +530,6 @@ void vEventGenericReceive( xEventHandle * pxEvent, xTaskHandle pxSource, xList *
     }
 
     volatile xListItem * pxFlag = pxConstList->xListEnd.pxNext;
-
 
     taskENTER_CRITICAL();
 

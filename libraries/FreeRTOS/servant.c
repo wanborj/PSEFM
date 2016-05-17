@@ -326,7 +326,7 @@ void vSensor( void * pvParameter )
             //xDatas[i].xTime = deadline -xPeriod + xLet;
         }
         // set the future model time
-        xFutureModelTime = deadline - xPeriod + xLet;
+        //xFutureModelTime = deadline - xPeriod + xLet;
 
         // create events for all destination servants of this servant. 
         vEventCreateAll( pvMyParameter, xDatas );

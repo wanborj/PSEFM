@@ -113,7 +113,7 @@ void vApplicationTickHook( void )
     {
         
         for( i = 0; i < NUMBEROFTASK; ++ i )
-            xSemaphoreGive( xBinarySemaphore[i*xConcurrents] );
+            xSemaphoreGive( xBinarySemaphore[i*(xConcurrents+1)] );
 
         IS_INIT = 0;
     }

@@ -1,0 +1,10 @@
+PSEFM
+
+This project is used to test the execution time of R-Servant in PSEFM.
+The execution time of R-Servant can be affected by two factors:
+    1. number of tasks
+    2. concurrents of one task
+
+Usage:
+    we can ajust the value of NUMBEROFTASK and Concurrents to test all 
+the situations we want know.
